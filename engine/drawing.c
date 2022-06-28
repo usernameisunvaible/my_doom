@@ -14,9 +14,9 @@
 
 void put_pixel(framebuffer_t *fbuffer, int x, int y, sfColor color)
 {
-    int i = 4 * WIDTH * y + x * 4;
+    int i = 4 * fbuffer->fbuf_size.x * y + x * 4;
 
-    if (x < WIDTH && x > 0 && y < HEIGHT && y > 0) {
+    if (x < fbuffer->fbuf_size.x && x > 0 && y < fbuffer->fbuf_size.y && y > 0) {
         fbuffer->framebuffer[i] = color.r;
         fbuffer->framebuffer[i + 1] = color.g;
         fbuffer->framebuffer[i + 2] = color.b;

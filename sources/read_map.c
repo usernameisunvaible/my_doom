@@ -42,3 +42,11 @@ map_ *read_the_map(char *name)
     map->size = define_vectori(b, j / b);
     return map;
 }
+
+sfBool colli(map_ *map, sfVector2f p)
+{
+    
+    if (map->map[map->size.x * (int)(p.y / 64) + (int)(p.x / 64)] == 49)
+        return sfTrue;
+    return sfFalse;
+}

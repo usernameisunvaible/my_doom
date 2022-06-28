@@ -25,8 +25,13 @@
 
 #define KEY_CODE elements->event.key.code
 
-#define NB_RAY 300
+#define NB_RAY 1080
 
-#define FOV 60
+#define FOV 80
 
-#define RAY_LEN 250
+#define RAY_LEN 350
+
+#define P_SPEED_FB 5
+#define P_SPEED_LR 3
+
+#define C_SPEED 4

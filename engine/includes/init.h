@@ -8,9 +8,6 @@
 #ifndef INIT_H_
     #define INIT_H_
 
-    #define WIDTH 1920
-    #define HEIGHT 1080
-
     #define CLICK_F 1
     #define SHOW_F 1 << 1
 
