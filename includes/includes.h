@@ -29,7 +29,7 @@
 
 #define FOV 80
 
-#define RAY_LEN 350
+#define RAY_LEN 450
 
 #define P_SPEED_FB 5
 #define P_SPEED_LR 3

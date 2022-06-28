@@ -97,9 +97,9 @@ int main (int ac, char **av)
             if (player->hit[i]) {
                 depth = dist_points(define_vectorf(player->pos.x, player->pos.y), sfVertexArray_getVertex(player->rays[i], 1)->position);
                 depth *= dcos(player->angle - (player->angle - FOV / 2));
-                wall_height = 21000 / (depth + 0.0001);
+                wall_height = 40000 / (depth + 0.0001);
                 (wall_height > elements->win_size.y) ? (wall_height = elements->win_size.y) :(0);
-                color = ((300 / 255 * depth) - 255) * -1;
+                color = ((RAY_LEN / 255 * depth) - 255) * -1;
                 (color <= 0) ? (color = 0) : (0);
                 draw_rect(fbr, define_rect(i * scale, (elements->win_size.y / 2) - wall_height / 2, (i * scale) + scale, ((elements->win_size.y / 2) - wall_height / 2) + wall_height ), sfColor_fromRGB(color, color, color));
                 // draw_line(fbr,define_vectorf(i + 700, RAY_LEN), define_vectorf(i + 700, ((dist_points(define_vectorf(player->pos.x, player->pos.y), sfVertexArray_getVertex(player->rays[i], 1)->position) - RAY_LEN) * -1) + RAY_LEN ), sfRed);
