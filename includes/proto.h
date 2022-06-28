@@ -1,6 +1,6 @@
 void *mmalloc(size_t size);
 map_ *read_the_map(char *name);
-elements_t *load_assets(void);
+elements_t *load_assets(sfVector2i screen);
 float to_rad(float deg);
 float dcos(float deg);
 float dsin(float deg);

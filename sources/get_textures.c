@@ -1,8 +1,8 @@
 #include "../includes/includes.h"
 
-elements_t *load_assets(void)
+elements_t *load_assets(sfVector2i screen)
 {
     char *textures[] = {"\0"};
     char *fonts[] = {"\0"};
-    return init_elements(textures, fonts, define_vectori(1920, 1080));
+    return init_elements(textures, fonts, screen);
 }
