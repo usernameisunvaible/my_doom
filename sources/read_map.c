@@ -1,6 +1,6 @@
 #include "../includes/includes.h"
 
-char *read_the_map(char *name)
+map_ *read_the_map(char *name)
 {
     map_ *map = malloc(sizeof(map_));
     struct _stat buf;
@@ -40,6 +40,5 @@ char *read_the_map(char *name)
     map->map[j] = 0;
     map->size_tot = j;
     map->size = define_vectori(b, j / b);
-    printf("%s \n%d\n%d %d", map->map, map->size_tot, map->size.x, map->size.y);
-    // return buffer;
+    return map;
 }

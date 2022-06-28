@@ -11,11 +11,13 @@
 #include <SFML/Graphics.h>
 #include "includes/include_engine.h"
 
-elements_t *init_elements(char **textures_path, char **font_path_list)
+elements_t *init_elements(char **textures_path, char **font_path_list, sfVector2i size)
 {
     elements_t *elements = malloc(sizeof(elements_t));
-    sfVideoMode mode = {WIDTH, HEIGHT, 32};
+    
 
+    elements->win_size = define_vectorf(size.x, size.y);
+    sfVideoMode mode = {elements->win_size.x, elements->win_size.y, 32};
     elements->window = sfRenderWindow_create(mode, "RPG",
 sfClose | sfFullscreen, NULL);
     elements->tex_list = init_tex(textures_path);
@@ -24,7 +26,7 @@ sfClose | sfFullscreen, NULL);
     elements->m_pos = sfMouse_getPositionRenderWindow(elements->window);
     elements->left = sfMouse_isButtonPressed(sfMouseLeft);
     elements->right = sfMouse_isButtonPressed(sfMouseRight);
-    elements->win_size = define_vectorf(WIDTH, HEIGHT);
+    
     return elements;
 }
 

@@ -8,7 +8,7 @@
 #ifndef INIT_P_H_
     #define INIT_P_H_
 
-elements_t *init_elements(char **textures_path, char **font_path_list);
+elements_t *init_elements(char **textures_path, char **font_path_list, sfVector2i size);
 /*This function create a struct which contain all the elements who need to
 be in the program
 args by args:

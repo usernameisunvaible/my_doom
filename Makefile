@@ -32,6 +32,9 @@ SRC	=	engine/sprite.c	\
 		engine/text_infos.c	\
 		sources/main.c	\
 		sources/read_map.c	\
+		sources/get_textures.c	\
+		sources/utils/ope.c	\
+		sources/init_player.c	\
 
 
 OBJ	=	$(SRC:.c=.o)
